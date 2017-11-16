@@ -1,0 +1,21 @@
+<form class="form">
+  <div class="form-group">
+    <mat-form-field id="line-form-control">
+      <input matInput type="number" placeholder="Línea" [formControl]="lineFormControl">
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field id="stop-form-control">
+      <input matInput type="number" placeholder="Parada" [formControl]="stopFormControl">
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <button mat-raised-button color="primary" (click)="search()">BUSCAR</button>
+  </div>
+</form>
+<!-- Another component. We should make a component to draw a bus and we should also use is a bus formatter -->
+<ng-container *ngIf="showBus">
+  <div style="margin-top:0.5em" *ngFor="let bus of buses">
+    {{ bus | json }}
+  </div>
+</ng-container>
