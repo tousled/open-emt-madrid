@@ -1,0 +1,13 @@
+<mat-card (click)="showMap(bus.latitude, bus.longitude)">
+  <mat-card-header>
+    <mat-card-title>
+      <mat-icon matPrefix svgIcon="bus-icon"></mat-icon>
+      {{ bus.number }}
+      <span>{{ bus.numberLine }} - {{ bus.nameLine }}</span>
+    </mat-card-title>
+    <mat-card-subtitle>
+      <mat-icon matPrefix>alarm</mat-icon>
+      {{ bus.timeToStop }}
+    </mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
